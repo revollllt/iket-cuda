@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+"""NVIDIA's run-iket, for images that ship the iket package (nvidia-cutlass-dsl)
+without its console script (lmsysorg/sglang:*-runtime): the same entry point."""
+import sys
+
+from iket.cli.main import entrypoint
+
+sys.argv[0] = "run-iket"
+sys.exit(entrypoint())
